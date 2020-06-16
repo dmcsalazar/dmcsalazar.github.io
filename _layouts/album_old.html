@@ -1,0 +1,11 @@
+---
+layout: default
+---
+{% for image in site.static_files %}
+{% assign lowerTitle = page.title | downcase %}
+{% if image.path contains lowerTitle %}
+  <img src="{{ image.path }}" />
+{% endif %}
+{% endfor %}
+
+{{ content }}

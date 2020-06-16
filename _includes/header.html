@@ -1,9 +1,12 @@
-<title>{{ site.title }}</title>
+<title>{% if page.title %} {{ page.title }} | {% endif%}{{ site.title }}</title>
+
+<link rel="stylesheet" href="/assets/css/flexslider.css">
+
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
 <!--[if lte IE 8]>
 <script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-<link rel="stylesheet" href="assets/css/main.min.css"/>
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css"/>
 <!--[if lte IE 9]>
 <link rel="stylesheet" href="assets/css/ie9.css"/><![endif]-->
 <!--[if lte IE 8]>
@@ -19,3 +22,14 @@
     ga('send', 'pageview');
 </script>
 {% endif %}
+
+<!-- Header -->
+<header id="header">
+    <h1><a href="{{ site.baseurl }}/"><strong>{{ site.header.title }}</strong> {{ site.header.subtitle }}</a></h1>
+    <nav>
+        <ul>
+            <li><a href="{{ site.baseurl }}/albums">albums</a></li>
+            <li><a href="#footer" class="icon fa-info-circle">about</a></li>
+        </ul>
+    </nav>
+</header>

@@ -1,0 +1,44 @@
+---
+layout: default
+---
+
+<style>
+
+  .flexslider .slides {
+    zoom: 1;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    align-items: center;
+  }
+
+  .flexslider .slides img {
+    max-height: 500px; /*maximum height for all slides*/
+    width: auto; /*proper aspect ratio of images*/
+    max-width: 90%; /*maximum width for all slides*/
+    margin: 0 auto; /*centering images in the container*/
+  }
+
+</style>
+<section>
+  <div class="flexslider">
+  <ul class="slides">
+    {% for image in site.static_files %}
+    {% if image.path contains page.album_folder_name %}
+      <li>
+        <img src="{{ image.path }}" alt=""
+             data-name="{{ image.name }}">
+      </li>
+    {% endif %}
+    {% endfor %}
+  </ul>
+</div>
+</section>
+
+<div class = "post">
+  <h1 class="post-h1">{{ page.title }}</h1>
+  {{ content }}
+</div>
