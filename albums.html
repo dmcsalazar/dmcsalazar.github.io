@@ -24,7 +24,7 @@ title: Albums
   <div id="main">
     {% for album in site.albums %}
     <article class="thumb" style="border: 5px solid white;float:left;">
-      <a href="{{ album.url }}" class = "album" style = 'background-image: url("{{ site.baseurl }}/images/fulls/{{ album.album_folder_name }}/{{ album.thumb_path }}")'>
+      <a href="{{ album.url }}" class = "album" style = 'background-image: url("{{ album.thumb_path }}")'>
       </a>
         <h2 style= "font-weight: bold;">{{ album.title }}</h2>
         <!--<p></p>-->
