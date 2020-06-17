@@ -5,12 +5,14 @@ fields:
 - type: text
   name: layout
   label: layout
+  hidden: true
+  default: album
 - type: text
   name: title
-  label: title
+  label: Title
 - type: file
   name: thumb_path
-  label: thumb_path
+  label: Thumbnail Image Name
 - type: text
   name: album_folder_name
-  label: album_folder_name
+  label: Album Folder Name
