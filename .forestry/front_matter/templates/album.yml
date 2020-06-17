@@ -16,3 +16,5 @@ fields:
 - type: text
   name: album_folder_name
   label: Album Folder Name
+pages:
+- _albums/montreal.md
