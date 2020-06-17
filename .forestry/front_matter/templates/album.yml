@@ -18,5 +18,6 @@ fields:
   label: Album Folder Name
 pages:
 - _albums/amsterdam.md
+- _albums/london.md
 - _albums/montreal.md
 - _albums/toronto.md
